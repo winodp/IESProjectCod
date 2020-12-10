@@ -1,0 +1,23 @@
+spring:
+#confgr db 
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+    password: vinod
+#configure hibernate properties    
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+#configure view resolver setup
+  mvc:
+    view:
+      prefix: /WEB-INF/pages/
+      suffix: .jsp
+    
+#cnfgr server port    
+server:
+  port: 7799
+  
